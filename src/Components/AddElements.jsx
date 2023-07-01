@@ -1,13 +1,21 @@
-import React from 'react'
-import AddImageElement from './AddImageElement'
+import{ React, useState} from 'react'
+import AddImageElement from './AddImageElement';
+import AddImageModal from './Modals/AddImageModal'
+
 
 function AddElements() {
+    const [imageModalOpen, setImageModalOpen] = useState(false)
+
+
   return (
     <div>
         <button>Text</button>
-        <button>Image</button>
+        <button onClick={()=>  setImageModalOpen(true)}>Image</button>
         <button>Background Colour</button>
-        <AddImageElement/>
+        <AddImageModal
+        //  fireChange={fireChange}
+         trigger= {imageModalOpen}
+          setTrigger={setImageModalOpen}/>
 
 
     </div>
