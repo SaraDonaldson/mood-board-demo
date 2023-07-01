@@ -1,0 +1,39 @@
+.moodboard-name{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 3px;
+  font-weight:500;
+  color:dimgrey;
+}
+
+
+.row {
+  margin-top: 50px;
+}
+
+.formlabel3 {
+  margin-top: 80px;
+  margin-bottom: 3px;
+  color: cornflowerblue;
+}
+
+.inputStyle {
+  border-color: transparent;
+  border-bottom-color: rgb(36, 72, 139);
+  background-color: transparent;
+}
+.inputStyle:focus {
+  outline: none;
+}
+.saveButton {
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom-color: rgb(36, 72, 139);
+  color: rgb(36, 72, 139);
+}
+
+.changeButton {
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 40px;
+  margin-top: 80px;
+}
