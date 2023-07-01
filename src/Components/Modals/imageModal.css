@@ -34,3 +34,34 @@
 .popup-inner .close-btn:hover {
     background-color: rgb(1, 1, 191);
 }
+
+
+/* ---------------------------------------------------------------------------------- */
+
+.img-grid-cont{
+    overflow:scroll;
+    height:85%;
+    border: 1px solid red;
+}
+
+.image-modal-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+.image-modal-item{
+    max-width: 170px;
+    max-height: 170px;
+   
+}
+.image-modal-sample-image{
+    object-fit: cover;
+    max-width: 170px;
+    max-height: 170px;   
+    aspect-ratio: 1/1; 
+}
+.image-select-checkbox { 
+    display:flex;
+}

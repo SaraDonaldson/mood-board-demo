@@ -1,7 +1,7 @@
 import React from 'react';
 import "./imageModal.css";
 import AddImageElement from '../AddImageElement';
-import AddImageGrid from '../AddImageGrid';
+import AddImageGrid from './AddImageGrid';
 
 export default function Popup({
   setTrigger,
