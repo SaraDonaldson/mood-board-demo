@@ -16,7 +16,7 @@ function AddElements() {
         //  fireChange={fireChange}
          trigger= {imageModalOpen}
           setTrigger={setImageModalOpen}/>
-
+        
 
     </div>
   )

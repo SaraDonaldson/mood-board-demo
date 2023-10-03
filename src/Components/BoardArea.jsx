@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./board.css";
 import { Rnd } from "react-rnd";
+import practiceElements from "../PracticeElements.js";
 
 function BoardArea({ 
     backgroundStyle, 
@@ -16,21 +17,17 @@ function BoardArea({
     const mystyle = backgroundStyle;
 
 
-
+    useEffect(() => {
+     setCurrentBoard(practiceElements);
+     console.log(practiceElements)
+    }, [])
+    
     function handleSelectText(textToEd, elementId){
         handleSelectedText({text:textToEd, key:elementId});
         setTextIsSelected(elementId);
       }
     
-      function getElementType(element){
-        console.log("element", element);
-        let tempEl = {...element}
-        let elType = tempEl.type.replace("[",'').replace("]",'').split(",");
-        let elT = elType[0].replace("{",'').replace("}",'').split(":");
-        console.log("elT", elT);
-        console.log("elT[1]", elT[1]);
-        return elT[1];
-      }
+
     
 
 
@@ -43,8 +40,7 @@ function BoardArea({
      
 
      {currentBoard.map((element,index) => {
-     let elementType = getElementType(element);  
-     if (elementType === "label"||element.type === "label"){
+     if (element.elType === "text"){
           return (
 
             <Rnd
@@ -72,7 +68,7 @@ function BoardArea({
               }}
               className={textIsSelected === index ? "selected-text" : ""} 
             >
-            {element.value}  </p>  
+            {element.detail}  </p>  
           </Rnd>
           );
 
@@ -80,23 +76,23 @@ function BoardArea({
          } else {
           return (
             <Rnd
-            lockAspectRatio={true}
+            lockAspectRatio={false}
             default={{
               x: 0,
               y: 0,
               width: 200,
               height: 200,
-              // minWidth:100,
-              // minHeight:100,
-              // maxWidth:700,
-              // maxHeight:700,
+              minWidth:100,
+              minHeight:100,
+              maxWidth:500,
+              maxHeight:500,
              
             }}
             key={element.id}
           >
               <div 
               className="mb-image" 
-              // onClick={() => {handleSelect(`${element.value}`)}}
+              onClick={() => {handleSelectedImage(`${element.id}`)}}
               style={{
                 minWidth:'100%',
                 minHeight:'100%',
@@ -110,8 +106,6 @@ function BoardArea({
             // className={isSelected ? "selected-image" : ""} 
             alt= ""
             style={{
-                // top: `${element.top}%`,
-                // left: element.left+'%',
                 zIndex: 1,
                 minWidth:'100%',
                 minHeight:'100%',
@@ -119,7 +113,7 @@ function BoardArea({
                 
                      
               }}
-              src={element.value}/>
+              src={element.detail}/>
               
               </div>
               </Rnd>

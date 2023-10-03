@@ -8,7 +8,13 @@ export default function Popup({
   trigger,
   selectedImage,
   children
-}) {
+})
+{
+
+  function addImageToBoard(){
+    setTrigger(false);
+  }
+
   return (trigger) ? (
     <div className='Overlay' onClick={()=> setTrigger(false)}>
     <div className='popup'>
@@ -17,6 +23,7 @@ export default function Popup({
        <h3>Add an image url or choose an image below</h3>
         <AddImageElement/>
         <AddImageGrid/>
+        <button onClick={e=>addImageToBoard()}>add</button>
         
        
       </div>

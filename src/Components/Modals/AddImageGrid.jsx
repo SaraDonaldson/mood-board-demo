@@ -15,7 +15,8 @@ function AddImageGrid() {
 ]
 
   function handleSelectImage(index){
-
+    // when selected add to array of URLs
+    // pass to modal and then to list of images
   }
 
   return (
