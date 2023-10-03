@@ -9,6 +9,7 @@ function AddElements() {
 
   return (
     <div>
+      <h2>New</h2>
         <button>Text</button>
         <button onClick={()=>  setImageModalOpen(true)}>Image</button>
         <button>Background Colour</button>

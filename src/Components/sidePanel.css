@@ -1,0 +1,19 @@
+
+.side-panel{
+    display:flex;
+    flex-direction: column;
+    max-width: 30vw;
+    margin-top: 50px;
+    margin-right: 100px;
+    border: 1px solid red;
+
+}
+
+
+.panel-section-one{
+
+}
+
+.panel-section-two{
+
+}

@@ -2,6 +2,8 @@ import {React, useState} from 'react';
 import MoodBoardNamer from './Components/MoodBoardNamer';
 import BoardArea from './Components/BoardArea';
 import AddElements from './Components/AddElements';
+import ImageMenu from './Components/ImageMenu';
+import SidePanel from './Components/SidePanel';
 
 function CreateMoodBoard() {
     let [elements, setElements] = useState([]);
@@ -21,14 +23,20 @@ function CreateMoodBoard() {
       }
 
   return (
-    <div>
+    <div className='moodboard-page'>
         <MoodBoardNamer/>
+        <div className='mb-page-grid-container'>
         <BoardArea
          handleSelectedImage={handleSelectedImage}
          handleSelectedText={handleSelectedText}
          change={change}
         />
-        <AddElements/>
+        <SidePanel/>
+
+        </div>
+        {/* <ImageMenu/> */}
+        
+        {/* <AddElements/> */}
         
        
         

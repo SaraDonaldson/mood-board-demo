@@ -1,9 +1,12 @@
 .displayArea {
-    margin:0 auto;
+    /* margin:0 auto; */
+    margin: 50px;
+    margin-left: 5%;
     width: 60vw;
     height: 75vh;
     position: relative;
     background-color: #fcf9d2;
+    justify-self:flex-start;
   }
   
   /* .displayArea img {
@@ -15,6 +18,8 @@
     max-width: 50%; */
     /* cursor:grab; 
   } */
+
+  
   div.mb-image {
     overflow: hidden;
     position: absolute;
