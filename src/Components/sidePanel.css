@@ -6,14 +6,60 @@
     margin-top: 50px;
     margin-right: 100px;
     border: 1px solid red;
+    justify-content: flex-start;
 
 }
 
+h2{
+    color:blueviolet;
+}
+
+h3{
+    color:rgb(60, 36, 198);
+}
 
 .panel-section-one{
 
 }
 
 .panel-section-two{
+    
+
+
+}
+
+.image-menu{
+    text-align: left;
+    margin-left: 20px;
+}
+
+.side-panel button {
+    border-radius: 20px;
+    border:none;
+    padding: 12px 20px 12px 20px;
+    background-color: blueviolet;
+    color: white;
+    box-shadow: inset 0px 5px 5px 0px rgb(130, 132, 255),
+                inset 0px 10px 6px 0px rgb(147, 99, 250),
+                inset 0px 15px 6px 0px rgb(133, 62, 255),
+                 0px 1px 5px 0px hsla(0, 0%, 0%, 0.3);
+    font-weight: 600;
+
+}
+.side-panel button:hover {
+    border: 2px solid blueviolet;
+    background-color: white;
+    color: blueviolet;
+    cursor: pointer;
+    box-shadow: 0px 1px 1px 0px hsla(0, 0%, 0%, 0.3);
+
+}
+.position-btn{
+    width:110px;
+    margin: 10px;
+}
+.crop-btn{
+    width: 200px;
+    margin: 10px;
 
 }

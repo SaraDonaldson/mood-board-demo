@@ -2,17 +2,17 @@ import React from 'react'
 
 function ImageMenu() {
 
-    
+
   return (
     <div className='image-menu'>
         <h2>Edit Image</h2>
 
         <h3>Position</h3>
-        <div className='position-btns'>
-        <button>Back - </button>
-        <button>Forward + </button>
-        
+        <div >
+        <button className='position-btn'>Back - </button>
+        <button className='position-btn'>Forward + </button>
         </div>
+        <button className='crop-btn'>crop</button>
 
     </div>
   )
