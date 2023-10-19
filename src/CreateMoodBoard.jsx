@@ -10,20 +10,23 @@ import PracticeElements from './PracticeElements';
 function CreateMoodBoard() {
     let [elements, setElements] = useState([]);
     let [change, setChange] = useState(true);
-    let [selectedImage, setSelectedImage] = useState();
     let [selectedText, setSelectedText] = useState();
     let [mbId, setMbId] = useState();
     let [updateText,  setUpdateText] = useState(false);
     let [textStyles, setTextStyles]= useState()
-    let [moodboardName, setMoodboardName]= useState()
+    let [textIsSelected, setTextIsSelected]= useState(false);
+    let [selectedImage, setSelectedImage] = useState({})
+    let [elementIsSelected, setElementIsSelected] = useState(false);
+    let [selectedElementType, setSelectedElementType] = useState(false);
 
     useEffect(() => {
       setElements(PracticeElements)
       console.log(elements)
     }, [])
     
-    function handleSelectedImage(imageUrl){
-        setSelectedImage(imageUrl);
+    function handleSelectedImage(id){
+      console.log("selected image id: ", id)
+        setSelectedImage(id);
       }
       function handleSelectedText(textToEdObj){
         setSelectedText(textToEdObj);
@@ -35,6 +38,24 @@ function CreateMoodBoard() {
         // set elements (newvariable) 
       }
 
+function saveImage(changeType, changeInfo){
+       let elementId= selectedImage
+       let editBoard = [...elements] 
+       const  getIndex = (element) => element.id > elementId
+       let obj = editBoard.findIndex(getIndex);
+        console.log("save is fired", changeType, "elementId: ", elementId, "obj: ", obj)
+       
+        // edit type is delete
+        if (changeType=== "delete"){
+            editBoard.splice(obj,1)
+        }
+          
+
+        setElements(editBoard)
+        console.log(selectedImage)
+    
+  }
+
   return (
     <div className='moodboard-page'>
         <MoodBoardNamer/>
@@ -43,8 +64,11 @@ function CreateMoodBoard() {
          handleSelectedImage={handleSelectedImage}
          handleSelectedText={handleSelectedText}
          change={change}
+         boardElementsData= {elements}
         />
-        <SidePanel/>
+        <SidePanel
+        handleSaveImage={saveImage}
+        />
 
         </div>
         {/* <ImageMenu/> */}

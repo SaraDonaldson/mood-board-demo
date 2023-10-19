@@ -34,7 +34,7 @@
   }
   
   .selected-image {
-    border: 2px solid blue;
+    border: 5px solid blue;
   }
   .selected-text{
     border: 1px solid green;

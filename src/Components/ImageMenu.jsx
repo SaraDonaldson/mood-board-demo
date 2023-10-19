@@ -1,7 +1,12 @@
 import React from 'react'
+import { useState, useEffect } from "react";
 
-function ImageMenu() {
-
+function ImageMenu({selectedImage, handleSaveImage}) {
+let [imageToEdit, setImageToEdit] = useState(selectedImage);
+  
+  useEffect(() => {
+    setImageToEdit(selectedImage)
+  }, [selectedImage])
 
   return (
     <div className='image-menu'>
@@ -9,10 +14,12 @@ function ImageMenu() {
 
         <h3>Position</h3>
         <div >
-        <button className='position-btn'>Back - </button>
-        <button className='position-btn'>Forward + </button>
+        <button className='position-btn' onClick={() => {handleSaveImage("Position", "-1")}}>Back - </button>
+        <button className='position-btn'onClick={() => {handleSaveImage("Position", "+1")}}>Forward + </button>
         </div>
-        <button className='crop-btn'>crop</button>
+        <button className='crop-btn'onClick={() => {handleSaveImage("Crop")}}>crop</button>
+        <button className='delete-btn' onClick={() => {handleSaveImage("delete")}}>delete</button>
+       
 
     </div>
   )

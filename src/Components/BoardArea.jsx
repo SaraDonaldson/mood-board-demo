@@ -1,33 +1,40 @@
 import React, { useState, useEffect } from "react";
 import "./board.css";
 import { Rnd } from "react-rnd";
-import practiceElements from "../PracticeElements.js";
+// import practiceElements from "../PracticeElements.js";
 
 function BoardArea({ 
     backgroundStyle, 
     handleSelectedImage, 
     handleSelectedText, 
     textPreviewStyle,
+    boardElementsData,
    change}) {
 
     let  [background, setBackground] =useState();
     const [currentBoard, setCurrentBoard]=useState([]);
     let [changes, setChanges] = useState(change);
-    const [textIsSelected, setTextIsSelected]= useState(false);
+    let [textIsSelected, setTextIsSelected]= useState(false);
+    let [imageIsSelected, setImageIsSelected]= useState(false);
+ 
     const mystyle = backgroundStyle;
 
 
     useEffect(() => {
-     setCurrentBoard(practiceElements);
-     console.log(practiceElements)
-    }, [])
+     setCurrentBoard(boardElementsData);
+     console.log(boardElementsData)
+    }, [boardElementsData])
     
     function handleSelectText(textToEd, elementId){
         handleSelectedText({text:textToEd, key:elementId});
         setTextIsSelected(elementId);
       }
-    
-
+      function handleSelectImage(elementId){
+        handleSelectedImage({key:elementId});
+        setImageIsSelected(false)
+        setImageIsSelected(elementId);
+      }
+   
     
 
 
@@ -103,7 +110,7 @@ function BoardArea({
 
             <img 
             draggable= {false}
-            // className={isSelected ? "selected-image" : ""} 
+            className={imageIsSelected ? "selected-image" : ""} 
             alt= ""
             style={{
                 zIndex: 1,

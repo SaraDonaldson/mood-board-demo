@@ -3,7 +3,10 @@ import ImageMenu from './ImageMenu'
 import AddElements from './AddElements'
 import './sidePanel.css';
 
-function SidePanel() {
+function SidePanel(
+  {handleSaveImage,
+  
+  }) {
   return (
     <div className='side-panel'>
         <div className='panel-section-one'>
@@ -11,7 +14,9 @@ function SidePanel() {
 
         </div>
         <div className='panel-section-two'>
-            <ImageMenu/>
+            <ImageMenu
+            handleSaveImage ={handleSaveImage}
+            />
 
         </div>
        
