@@ -18,15 +18,16 @@ function CreateMoodBoard() {
     let [selectedImage, setSelectedImage] = useState({})
     let [elementIsSelected, setElementIsSelected] = useState(false);
     let [selectedElementType, setSelectedElementType] = useState(false);
+    
 
     useEffect(() => {
       setElements(PracticeElements)
       console.log(elements)
     }, [])
     
-    function handleSelectedImage(id){
-      console.log("selected image id: ", id)
-        setSelectedImage(id);
+    function handleSelectedImage(id, index){
+      console.log("selected image id: ", id, " , index: ", index)
+        setSelectedImage({id: id, index:index});
       }
       function handleSelectedText(textToEdObj){
         setSelectedText(textToEdObj);
@@ -39,17 +40,29 @@ function CreateMoodBoard() {
       }
 
 function saveImage(changeType, changeInfo){
-       let elementId= selectedImage
-       let editBoard = [...elements] 
-       const  getIndex = (element) => element.id > elementId
-       let obj = editBoard.findIndex(getIndex);
-        console.log("save is fired", changeType, "elementId: ", elementId, "obj: ", obj)
-       
+       let elementId= selectedImage.id
+       let elementIndex = selectedImage.index
+       let editBoard = [...elements]  
+      console.log("save is fired", changeType, "elementId: ", elementId, "elementIndex: ", elementIndex)
+      console.log("editBoard[objIndex]", editBoard[elementIndex] )
         // edit type is delete
         if (changeType=== "delete"){
-            editBoard.splice(obj,1)
+            editBoard.splice(elementIndex,1)
         }
-          
+        if (changeType === "position"){
+          if(changeInfo==="back"){
+            if (editBoard[elementIndex].zIndex > 0){
+              editBoard[elementIndex].zIndex -= 1
+            }}
+          if(changeInfo === "forward"){
+            // if (editBoard[elementIndex].zIndex <= 15){
+              let  currentZ =editBoard[elementIndex].zIndex 
+                editBoard[elementIndex].zIndex =currentZ+1
+                console.log("increasing z-index",  editBoard[elementIndex].zIndex)
+            // }
+          }  
+        }
+
 
         setElements(editBoard)
         console.log(selectedImage)

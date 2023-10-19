@@ -29,8 +29,8 @@ function BoardArea({
         handleSelectedText({text:textToEd, key:elementId});
         setTextIsSelected(elementId);
       }
-      function handleSelectImage(elementId){
-        handleSelectedImage({key:elementId});
+      function handleSelectImage(elementId, index){
+        handleSelectedImage({key:elementId, index: index});
         setImageIsSelected(false)
         setImageIsSelected(elementId);
       }
@@ -99,12 +99,10 @@ function BoardArea({
           >
               <div 
               className="mb-image" 
-              onClick={() => {handleSelectedImage(`${element.id}`)}}
+              onClick={() => {handleSelectedImage(`${element.id}`, `${index}`)}}
               style={{
                 minWidth:'100%',
                 minHeight:'100%',
-    
-
             }}
              >
 
@@ -113,7 +111,7 @@ function BoardArea({
             className={imageIsSelected ? "selected-image" : ""} 
             alt= ""
             style={{
-                zIndex: 1,
+                zIndex:`${element.zIndex}`,
                 minWidth:'100%',
                 minHeight:'100%',
                 objectFit: "100%",  

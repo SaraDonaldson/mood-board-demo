@@ -14,8 +14,8 @@ let [imageToEdit, setImageToEdit] = useState(selectedImage);
 
         <h3>Position</h3>
         <div >
-        <button className='position-btn' onClick={() => {handleSaveImage("Position", "-1")}}>Back - </button>
-        <button className='position-btn'onClick={() => {handleSaveImage("Position", "+1")}}>Forward + </button>
+        <button className='position-btn' onClick={() => {handleSaveImage("position", "back")}}>Back - </button>
+        <button className='position-btn'onClick={() => {handleSaveImage("position", "forward")}}>Forward + </button>
         </div>
         <button className='crop-btn'onClick={() => {handleSaveImage("Crop")}}>crop</button>
         <button className='delete-btn' onClick={() => {handleSaveImage("delete")}}>delete</button>
