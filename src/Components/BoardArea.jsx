@@ -87,12 +87,14 @@ function BoardArea({
             default={{
               x: 0,
               y: 0,
-              width: 200,
-              height: 200,
-              minWidth:100,
-              minHeight:100,
+              width: 150,
+              height: 150,
+              minWidth:150,
+              minHeight:150,
               maxWidth:500,
               maxHeight:500,
+              zIndex:`${element.zIndex}`,
+            
              
             }}
             key={element.id}
@@ -103,6 +105,8 @@ function BoardArea({
               style={{
                 minWidth:'100%',
                 minHeight:'100%',
+                objectFit: "cover", 
+                
             }}
              >
 
@@ -114,7 +118,7 @@ function BoardArea({
                 zIndex:`${element.zIndex}`,
                 minWidth:'100%',
                 minHeight:'100%',
-                objectFit: "100%",  
+               
                 
                      
               }}

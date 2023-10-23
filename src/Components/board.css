@@ -9,15 +9,14 @@
     justify-self:flex-start;
   }
   
-  /* .displayArea img {
-    max-height: 100%; */
-    /* overflow: hidden;
-    position: absolute;
+  .displayArea img {
+    max-height: 100%; 
+    overflow: hidden;
     margin: auto;
     max-height: 24%;
-    max-width: 50%; */
-    /* cursor:grab; 
-  } */
+    max-width: 50%; 
+    object-fit: cover; 
+  }
 
   
   div.mb-image {
@@ -26,7 +25,6 @@
     margin: auto;
     max-height: 24%;
     max-width: 50%;
-    cursor:grab;
   }
   
   p {
