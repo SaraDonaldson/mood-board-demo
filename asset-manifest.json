@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mood-board-demo/static/css/main.f78dc94f.css",
+    "main.css": "/mood-board-demo/static/css/main.7066f446.css",
     "main.js": "/mood-board-demo/static/js/main.1874ca44.js",
     "static/js/787.f8972954.chunk.js": "/mood-board-demo/static/js/787.f8972954.chunk.js",
     "index.html": "/mood-board-demo/index.html",
-    "main.f78dc94f.css.map": "/mood-board-demo/static/css/main.f78dc94f.css.map",
+    "main.7066f446.css.map": "/mood-board-demo/static/css/main.7066f446.css.map",
     "main.1874ca44.js.map": "/mood-board-demo/static/js/main.1874ca44.js.map",
     "787.f8972954.chunk.js.map": "/mood-board-demo/static/js/787.f8972954.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f78dc94f.css",
+    "static/css/main.7066f446.css",
     "static/js/main.1874ca44.js"
   ]
 }
