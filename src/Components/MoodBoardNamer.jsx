@@ -4,6 +4,8 @@ function MoodBoardNamer() {
     let [moodBoardName, setMoodBoardName] = useState();
     let [editName, setEditName] = useState(false);
     let [nameInput, setNameInput] = useState('');
+    let [nameMe, setNameMe] = useState(true);
+    let [nameIsEdited, setNameIsEdited]  = useState(false);
 
     function handleEditName(){
         setMoodBoardName(nameInput);
@@ -15,12 +17,12 @@ function MoodBoardNamer() {
     }
 
   return (
-    <div>
+    <div className='moodboard-namer'>
           <div>
             
-            { !moodBoardName && !editName && (
-            <div><h1>New Mood Board</h1>
-             <button onClick={()=> setEditName(true)}>edit name</button>
+            { !moodBoardName && !editName && nameMe && (
+            <div className='edit-name' onClick={()=> setEditName(true)}><h1>Click to Name me</h1>
+        
              </div> 
              )} 
               { moodBoardName && !editName &&(
