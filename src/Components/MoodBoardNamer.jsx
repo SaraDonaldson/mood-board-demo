@@ -21,14 +21,14 @@ function MoodBoardNamer() {
           <div>
             
             { !moodBoardName && !editName && nameMe && (
-            <div className='edit-name' onClick={()=> setEditName(true)}><h1>Click to Name me</h1>
+            <div className='edit-name' onClick={()=> setEditName(true)}><h1>Name me</h1>
         
              </div> 
              )} 
               { moodBoardName && !editName &&(
                  <div>
          <h1>{moodBoardName}</h1>
-         <button onClick={()=> setEditName(true)}>edit name</button>
+         <button  className= "edit-name-btn" onClick={()=> setEditName(true)}>edit name</button>
          </div> 
          )} 
         
@@ -38,12 +38,13 @@ function MoodBoardNamer() {
      >
          <label>
              <input
+             className="while-editing-name"
              value = {nameInput}
              type="text"
              onChange={(e) => handleInput(e)}
              ></input>
          </label>
-         <button type='submit'>done</button>
+         <button className= "edit-name-btn" type='submit'>done</button>
      </form>
      )}
 
