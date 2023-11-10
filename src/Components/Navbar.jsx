@@ -14,6 +14,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div className='logo-container'>
+       <img src="" ></img>
         <div className="logo">
           Creative Moods
         </div>
