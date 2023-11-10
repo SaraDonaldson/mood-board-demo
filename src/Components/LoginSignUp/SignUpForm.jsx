@@ -19,7 +19,7 @@ function SignUpForm() {
     }
   return (
     <div className='login-form'>
-       <h1>Create an Account</h1>
+
       <form onSubmit={handleSubmit}>
 <div className="form-field">
   <label>Email</label>
