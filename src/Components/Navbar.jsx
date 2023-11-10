@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div className='logo-container'>
-       <img src="public/Mood board iconcloudy.png" alt="cloud site logo"/>
+       <img src="./creativemoods.png" alt="cloud site logo"/>
         <div className="logo">
           Creative Moods
         </div>
