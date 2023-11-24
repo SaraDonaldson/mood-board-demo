@@ -1,4 +1,4 @@
-# Project Overview
+#  Project Overview
 
 A front end version of the full stack mood board app.
 
@@ -10,9 +10,6 @@ A front end version of the full stack mood board app.
 ## RND - Drag and Resize Feature
 - This was the most interesting part to build - I used the package [React RND] (https://www.npmjs.com/package/react-rnd)
 - You can see it in use in this [file](https://github.com/SaraDonaldson/mood-board-demo/blob/main/src/Original/SelectedMoodboard.js) in the repo.
-
-
-
 
 
 # Getting Started with Create React App
