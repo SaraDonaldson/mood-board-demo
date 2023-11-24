@@ -1,3 +1,20 @@
+#Project Overview
+
+A front end version of the full stack mood board app.
+
+## Original Project Vs. This Project
+- The very first version was forked from Wen, a peer in my CodeOp Bootcamp. I had a week to add a feature to the app, where I added the drag and resize.
+- Since then I've worked on another full stack version continuously making it my own - adding login and auth, a user dashboard and various styling options on the board for the user. These features will be added to the demo in late December 2023.
+- This project has hard coded moodboard elements, whereas the original had an SQL DB. I'll be simulating this functionality with local storage in the browser in the next deployment in December 2023
+
+## RND - Drag and Resize Feature
+- This was the most interesting part to build - I used the package [React RND] (https://www.npmjs.com/package/react-rnd)
+- You can see it in use in this [file](https://github.com/SaraDonaldson/mood-board-demo/blob/main/src/Original/SelectedMoodboard.js) in the repo.
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
